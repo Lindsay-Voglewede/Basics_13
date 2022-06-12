@@ -1,0 +1,67 @@
+
+/*Calculate a students Overall GPA (0 to 10 scale) based on credits and final grades for each subject*/
+
+/*My assumption:
+Math=8.6        -->4 credits    -->8.6*4=34.4
+physics=7.2     -->3 credits    -->7.2*3=21.6
+Gym=9.8         -->1 credit     -->9.8*1=9.8
+Chemistry=6.1   -->3 credits    -->6.1*3=18.3
+History=8.0     -->2 credits    -->8.0*2=16.0
+
+sum=100.1
+total=sum/13=7.7
+*/
+
+////////////////////////////
+/// By Lindsay Voglewede ///
+////////////////////////////
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    float sum=0;
+    //Variables for grads
+    float Math=0;
+    float Hist=0;
+    float Gym=0;
+    float Chem=0;
+    float Phy=0;
+    //Variables for credits
+    float Math_c=4.00;
+    float Hist_c=3.00;
+    float Gym_c=1.0;
+    float Chem_c=3.0;
+    float Phy_c=2.0;
+
+    //Variable for sum of grades multiplied by credits
+    printf("Enter grade for MATH (4 credits)\n");
+    scanf("%f",&Math);
+    printf("Enter grade for PHYSICS (3 credits)\n");
+    scanf("%f",&Phy);
+    printf("Enter grade for GYM (1 credit)\n");
+    scanf("%f",&Gym);
+    printf("Enter grade for CHEMISTRY (3 credits)\n");
+    scanf("%f",&Chem);
+    printf("Enter grade for HISTORY (2 credits)\n");
+    scanf("%f",&Hist);
+
+/*
+    printf("Calculations are defined by the grade multiplied by the credits: \n");
+    printf("%f*4= %f\n",Math,Math);
+    printf("physics=%f    -->3 credits    -->%f*3=%f\n");
+    printf("Gym=9.8         -->1 credit     -->%f*1=%f\n");
+    printf("Chemistry=6.1   -->3 credits    -->%f*3=%f\n");
+    printf("History=8.0     -->2 credits    -->%f*2=%f\n");
+*/
+
+    //Operations and Outputs
+    sum=(Math*Math_c) + (Hist*Hist_c) + (Gym*Gym_c) + (Chem*Chem_c) + (Phy*Phy_c);
+    //printf("The final sum is=%f\n",sum);
+    sum=sum/13;
+    printf("The sum divided by the credit is= %f\n",sum);
+    
+
+}
